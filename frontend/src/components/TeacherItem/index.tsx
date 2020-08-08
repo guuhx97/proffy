@@ -1,38 +1,54 @@
 import React from "react";
 import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
+import api from "../../services/api";
 import "./styles.css";
 
-const TeacherItem: React.FC = () => {
+export interface Teacher {
+  name: string;
+  avatar: string;
+  bio: string;
+  cost: number;
+  whatsapp: string;
+  id: number;
+  subject: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+  function handleCrateConnection() {
+    api.post("connections", {
+      user_id: teacher.id,
+    });
+  }
+
   return (
     <article className="teacher-item">
       <header>
-        <img
-          src="https://avatars1.githubusercontent.com/u/22873208?s=460&u=1cba53099a08af2ee91d40626e1ee2e585e57021&v=4"
-          alt="Profile"
-        />
+        <img src={teacher.avatar} alt={teacher.name} />
         <div>
-          <strong>Gustavo Roberto</strong>
-          <span>Quimica</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
-      <p>
-        Entusiasta das melhores tecnologias de quimica avançadas
-        <br />
-        <br />
-        Apaixonado por explodit coisas em labóratoprio e por mudar a vida das
-        pessoas através de experiências. Mais de 200.000 pessoas já passaram por
-        uma das minhas explosões.
-      </p>
+      <p>{teacher.bio}</p>
 
       <footer>
         <p>
           Preço/Hora
-          <strong>R$80,00</strong>
+          <strong>R${teacher.cost}</strong>
         </p>
-        <button type="button">
+        <a
+          onClick={handleCrateConnection}
+          target="_blank"
+          href={`https://wa.me/${teacher.whatsapp}`}
+          type="button"
+        >
           <img src={whatsappIcon} alt="Whatsapp" />
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   );
