@@ -5,7 +5,6 @@ class ConnectionController {
   async create(req: Request, res: Response) {
     const { user_id } = req.body;
 
-    console.log(user_id);
     await db("connections").insert({
       user_id,
     });
