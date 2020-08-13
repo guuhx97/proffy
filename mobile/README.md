@@ -13,15 +13,15 @@
 
 ## 📱 Interfaces
 
-A interface web conta com 3 telas. A landing page, a tela para cadastro de materias, dias e professores e a tela onde o aluno pode realizar a busca para de de professores.
+O aplicativo mobile é composto por algumas interfaces, sendo elas: A login, a de professores, a de alunos e aonde é possível buscar professores por horário, máteria e dia da semana.
 
 <div align="center">
-    <img alt="Proffy" width="500px" src="../.github/frontend-interface.png" />
+    <img alt="Proffy" src="../.github/mobile-interface.png"  height="355.5px"/>
 </div>
 
 ## 🔄 Executar
 
-- Entrar na pasta `frontend`;
+- Entrar na pasta `mobile`;
 - Executar `yarn install` para instalar dependências do projeto;
 - Executar `yarn start` para que o projeto seja executado;
 

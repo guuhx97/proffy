@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Proffy" src=".github/logo.svg" />
+    <img alt="Proffy" src=".github/logo.png" width="400px" />
 </h1>
 
 <h4 align="center">
@@ -11,7 +11,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <p align="center">
-  <img alt="Proffy" src=".github/proffy-screens.svg" width="100%">
+  <img alt="Proffy" src=".github/proffy-screens.png" width="100%">
 </p>
 
 ## 👨🏼‍💻 Projeto
@@ -21,11 +21,12 @@ O proffy é uma plataforma desenvolvida com o intuito de juntar pessoas que quer
 ## 🔨 Tecnologias
 
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript)
+- [Typescript](https://www.typescriptlang.org/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.io/)
-- [MongoDB](https://www.mongodb.com/)
+- [SQLite](https://www.sqlite.org/index.html)
 
 ## 🔄 Executar
 
@@ -34,6 +35,7 @@ O proffy é uma plataforma desenvolvida com o intuito de juntar pessoas que quer
 ### 🔧 Back-end
 
 - Entrar na pasta `backend`;
+- Executar `yarn knex:migrate` para inicializar o banco de dados;
 - Executar `yarn install` para instalar dependências do projeto;
 - Executar `yarn dev` para que o projeto seja executado;
 
@@ -46,6 +48,7 @@ O proffy é uma plataforma desenvolvida com o intuito de juntar pessoas que quer
 ### 📱 Mobile
 
 - Entrar na pasta `mobile`;
+
 - Executar `yarn install` para instalar dependências do projeto;
 - Executar `yarn start` para que o projeto seja executado;
 
